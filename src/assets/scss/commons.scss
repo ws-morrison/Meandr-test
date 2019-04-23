@@ -3,15 +3,25 @@ img {
     height: auto;
   }
 
-  a {
+a {
     text-decoration: none;
   }
-
+  
   textarea {
     overflow: hidden;
+  }  
+  
+  textarea,
+  input {
+    outline: none;
+  }
+  
+  textarea:focus,
+  input:focus {
+    border-bottom: 2px solid #F47821;
   }
   
   .container {
     padding-left: 10px;
     padding-right: 10px;
-  }
+   }

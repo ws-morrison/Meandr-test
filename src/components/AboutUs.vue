@@ -27,18 +27,16 @@ export default {
 .about-us {
   max-width: 773px;
   margin: 0 auto;
-
   padding-top: 80px;
   padding-bottom: 100px;
-
-  @media (max-width: 768px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  @media (max-width: $tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   &__title {
-    font-family: "DIN Pro", Arial, Helvetica, sans-serif;
-    font-size: 48px;
+    font-family: $primary;
+    font-size: $font-size-desktop-2xl;
     line-height: normal;
     text-align: left;
     letter-spacing: -0.02em;
@@ -47,10 +45,10 @@ export default {
     margin-bottom: 30px;
   }
   &__text {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: $additional;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: $font-size-s;
     line-height: 26px;
     color: #4e4d53;
     margin: 0;

@@ -126,24 +126,30 @@ export default {
 @import "../assets/scss/vars.scss";
 @import "../assets/scss/fonts.scss";
 @import "../assets/scss/commons.scss";
-@import "../assets/scss/thumbs.scss";
+
 .blank {
   padding-top: 100px;
   padding-bottom: 120px;
-
   background-color: $secondary-bg;
-
   color: #fff;
+  @media (max-width: $tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   &__title {
     margin: 0;
     text-align: center;
-    font-family: "DIN Pro", Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-family: $primary-light;
+    font-weight: 300;
+    font-size: $font-size-3xl;
     line-height: normal;
     text-align: center;
     letter-spacing: -0.02em;
     margin-bottom: 60px;
     color: #fff;
+    @media (max-width: $tablet) {
+      font-size: $font-size-desktop-xl;
+    }
   }
 }
 
@@ -152,47 +158,39 @@ export default {
   display: block;
   margin: 0 auto;
   &__input-title {
-    font-family: "DIN Pro", Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-family: $primary-medium;
+    font-size: $font-size-s;
     line-height: 25px;
     letter-spacing: -0.01em;
-
     color: #ffffff;
     display: block;
-
     position: relative;
   }
 
   &__input {
     width: 100%;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
+    font-family: $additional;
+    font-size: $font-size-desktop-m;
     line-height: 35px;
     letter-spacing: -0.01em;
-
     padding-top: 12px;
     padding-bottom: 24px;
     color: #ffffff;
-
     opacity: 0.3;
     background-color: $secondary-bg;
     border: none;
     border-bottom: 2px solid rgba(247, 248, 250, 0.1);
-
     margin-bottom: 48px;
   }
   &__button {
     border: none;
     margin: 0 auto;
     margin-top: 12px;
-    font-family: "Gilroy", Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-family: $secondary-bold;
+    font-size: $font-size-ms;
     line-height: normal;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-
     color: $accient;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -202,31 +200,54 @@ export default {
     background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
     border-radius: 111px;
+    &:hover {
+      background-color: $accient;
+      color: #fff;
+      transition: 0.2s linear;
+      cursor: pointer;
+    }
   }
 }
 
 .errors {
+  &__caption {
+    font-family: $primary-medium;
+    font-size: $font-size-s;
+  }
   &__list {
     list-style: none;
   }
   &__item {
     text-decoration: underline;
+    font-family: $primary;
+    font-size: $font-size-ms;
+    line-height: 25px;
+    letter-spacing: -0.01em;
   }
 }
 
-textarea,
-input {
-  outline: none;
-}
+.input-thumb {
+  content: "1";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(247, 248, 250, 0.23);
+  border-radius: 100px;
+  font-family: $additional;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: normal;
+  text-align: center;
+  color: $accient;
+  left: -100px;
+  top: -20px;
 
-textarea:focus,
-input:focus {
-  border-bottom: 2px solid $accient;
+  @media (max-width: 900px) {
+    display: none;
+  }
 }
-/* стили только для IE10 и IE11 */
-// @media (-ms-high-contrast: active), (-ms-high-contrast: none) {
-//   textarea {
-//     overflow: hidden;
-//   }
-// }
 </style>

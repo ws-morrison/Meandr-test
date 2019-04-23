@@ -11,9 +11,6 @@
 @import "../assets/scss/vars.scss";
 
 .add-button {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   display: block;
   background-color: $primary-bg;
   width: 54px;
@@ -26,10 +23,6 @@
     position: relative;
     max-width: 236px;
     margin: 0 auto;
-    // margin-bottom: 125px;
-    // @media (max-width: 768px) {
-    //   margin-bottom: 60px;
-    // }
   }
   &__thumb {
     position: absolute;
@@ -37,9 +30,8 @@
     left: 20px;
   }
   &__caption {
-    font-family: "Gilroy", Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 900;
+    font-family: $secondary-bold;
+    font-size: $font-size-s;
     line-height: normal;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -50,7 +42,7 @@
     right: 30px;
   }
   &:hover {
-    transition-delay: 0.9ms ease-in-out;
+    transition: 0.2s linear;
     width: 280px;
   }
 }

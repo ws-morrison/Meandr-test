@@ -1,6 +1,5 @@
 <template>
   <main class="main">
-    <!-- :style="{ backgroundImage: 'url(' + backgroundImg + ')' }" -->
     <div class="main-background">
       <img class="main-background__img" :src="backgroundImg" alt>
       <div class="main__wrapper">
@@ -18,7 +17,7 @@
 import MainItem from "./MainItem";
 import AboutUs from "./AboutUs";
 import Features from "./Features";
-import TheForm from './TheForm'
+import TheForm from "./TheForm";
 export default {
   name: "TheMain",
   components: {
@@ -69,9 +68,12 @@ export default {
 <style lang="scss">
 @import "../assets/scss/vars.scss";
 .main {
-  max-width: 1440px;
+  max-width: $desktop-l;
   margin: 0 auto;
-
+  @media (max-width: $tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   &__wrapper {
     display: flex;
     width: 100%;
@@ -82,8 +84,9 @@ export default {
 
     position: relative;
     top: -5vw;
-    // top: -103px;
-    @media (max-width: 768px) {
+    @media (max-width: $tablet) {
+      padding-top: 30px;
+      padding-bottom: 15px;
       top: 0;
     }
   }
@@ -92,21 +95,21 @@ export default {
   position: relative;
   background-color: $primary-bg;
   &__img {
-    @media (max-width: 768px) {
+    @media (max-width: $tablet) {
       display: none;
     }
   }
 }
 
-/* стили только для IE10 и IE11 */
+/* only for IE10 & IE11 */
 @media (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .main {
     display: block;
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: $desktop-l;
     &__wrapper {
       display: flex;
-      max-width: 1024px;
+      max-width: $desktop;
       margin: 0 auto;
     }
   }

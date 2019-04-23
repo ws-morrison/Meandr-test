@@ -16,9 +16,4 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-@import "./assets/scss/commons.scss";
-#app {
-  font-family: Arial, Helvetica, sans-serif;
-}
-</style>
+

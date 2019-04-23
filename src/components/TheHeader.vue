@@ -29,42 +29,38 @@ export default {
 
 .header {
   padding-top: 140px;
-  // display: flex;
-  // flex-direction: column;
   display: block;
-
   padding-bottom: 120px;
-  @media (max-width: 768px) {
-    padding-top: 60px;
 
-    padding-bottom: 60px;
+  @media (max-width: $tablet) {
+    padding-top: 40px;
+    padding-bottom: 10px;
   }
 }
 .heading {
   display: block;
-  // width: 100%;
   margin: 0 auto;
   text-align: center;
   &__title {
-    font-family: "DIN Pro", Arial, Helvetica, sans-serif;
+    font-family: $primary;
     font-weight: 500;
-    font-size: 48px;
+    font-size: $font-size-desktop-2xl;
     line-height: 54px;
     letter-spacing: -0.02em;
     color: $primary-text;
     margin-bottom: 25px;
-    @media (max-width: 768px) {
+    @media (max-width: $tablet) {
       font-weight: 500;
-      font-size: 28px;
+      font-size: $font-size-xxl;
       line-height: normal;
       letter-spacing: normal;
     }
   }
   &__caption {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: $additional;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: $font-size-s;
     line-height: 26px;
     color: $secondary-text;
 
@@ -72,8 +68,8 @@ export default {
     &--accient {
       color: $accient;
     }
-    @media (max-width: 768px) {
-      font-size: 16px;
+    @media (max-width: $tablet) {
+      font-size: $font-size-s;
       line-height: normal;
     }
   }

@@ -58,19 +58,20 @@ export default {
 .features {
   padding-top: 120px;
   padding-bottom: 120px;
-
   background-color: $primary-bg;
+  @media (max-width: $tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   &__title {
     margin: 0;
     text-align: center;
     font-family: "DIN Pro", Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: $font-size-3xl;
     line-height: normal;
     text-align: center;
     letter-spacing: -0.02em;
-
     color: #000000;
-
     margin-bottom: 60px;
   }
   &__wrapper {
@@ -79,7 +80,7 @@ export default {
     flex-wrap: nowrap;
     max-width: 1200px;
     margin: 0 auto;
-    @media (max-width: 768px) {
+    @media (max-width: $tablet) {
       flex-direction: column;
       align-items: center;
     }

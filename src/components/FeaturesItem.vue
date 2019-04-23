@@ -26,27 +26,25 @@ export default {
 @import "../assets/scss/vars.scss";
 @import "../assets/scss/commons.scss";
 .features-item {
-    max-width: 320px;
+  max-width: 320px;
   margin-bottom: 40px;
-
   padding-left: 20px;
   padding-right: 20px;
   &__title {
-    font-family: "DIN Pro", Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-family: $primary-medium;
+    font-size: $font-size-l;
     line-height: normal;
     color: #000000;
     margin: 0;
     margin-bottom: 22px;
   }
   &__text {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: $additional;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: $font-size-s;
     line-height: 26px;
     margin: 0;
-
     color: #4e4d53;
   }
   &__thumb {
