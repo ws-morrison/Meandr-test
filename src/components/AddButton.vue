@@ -45,6 +45,9 @@
     transition: 0.2s linear;
     width: 280px;
   }
+  @media (max-width: $tablet) {
+    width: 280px;
+  }
 }
 </style>
 
